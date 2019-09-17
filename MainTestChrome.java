@@ -1,12 +1,5 @@
 package com.gcsoft.autots.domain;
 
-// Selenium
-// cmd
-// F:\svn\03_Work\02_方式設計\自動化テストツール\Selenium利用手順\00.環境構築\02.Replay\OnlineAutoTest
-// screenshot
-// F:\svn\03_Work\02_方式設計\自動化テストツール\Selenium利用手順\02.ReplayEXE-Src\OnlineAutoTest\online-auto-test\src\java\com\gcsoft\autots
-// System.setProperty("webdriver.edge.driver", "XXXXXXX\\MicrosoftWebDriver.exe");
-//driver = new EdgeDriver();
 import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
@@ -51,11 +44,8 @@ public class MainTestChrome {
 	@Before
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver",
-				"F:\\svn\\03_Work\\02_方式設計\\自動化テストツール\\00.Soft\\ReplayEXE\\Java\\01.環境構築\\chromedriver.exe");
-//		System.setProperty("webdriver.ie.driver",
-//				"F:\\svn\\03_Work\\02_方式設計\\自動化テストツール\\00.Soft\\ReplayEXE\\Java\\01.環境構築\\IEDriverServer.exe");
+				"F:\\路径\\chromedriver.exe");
 		driver = new ChromeDriver();
-//		driver = new InternetExplorerDriver();
 		try {
 			robot = new Robot();
 			robot.setAutoDelay(bobotTime);
@@ -91,7 +81,7 @@ public class MainTestChrome {
 	public void qerrweq() throws InterruptedException {
 		driver.manage().window().maximize();
 		WebDriverWait wait = new WebDriverWait(driver, 20);
-		driver.get("http://172.17.4.124/Pd_0001/");
+		driver.get("http://网址/");
 
 		// Login
 		driver.findElement(By.id("UserName")).click();
@@ -144,7 +134,7 @@ public class MainTestChrome {
 //		driver.findElement(By.id("TxtPassScore")).click();
 //		driver.findElement(By.id("TxtPassScore")).sendKeys("43");
 //		driver.findElement(By.id("ImgBtnOK")).click();
-//		assertThat(driver.switchTo().alert().getText(), is("更新します。よろしいですか？"));
+//		assertThat(driver.switchTo().alert().getText(), is("XXX"));
 //		driver.switchTo().alert().accept();
 //		driver.switchTo().defaultContent();
 //		driver.switchTo().frame(2);
@@ -174,7 +164,7 @@ public class MainTestChrome {
 		// Registration method
 		vars.put("window_handles", driver.getWindowHandles());
 		driver.findElement(By.id("DrpLstRegistFileType")).sendKeys(Keys.ENTER);
-		driver.findElement(By.xpath("//option[. = 'パッケージ文書登録']")).click();
+		driver.findElement(By.xpath("//option[. = 'XXX']")).click();//下拉框
 		driver.findElement(By.id("DrpLstRegistFileType")).sendKeys(Keys.ENTER);
 		vars.put("window_handles", driver.getWindowHandles());
 		driver.findElement(By.id("ImgBtnDocClsSelect")).sendKeys(Keys.ENTER);
@@ -191,7 +181,7 @@ public class MainTestChrome {
 		driver.findElement(By.id("RptDocRegistAttrEdit_ctl01_TxtAttrValue")).sendKeys("wss");
 		vars.put("window_handles", driver.getWindowHandles());
 		driver.findElement(By.id("BtnModify")).sendKeys(Keys.ENTER);
-		assertThat(driver.switchTo().alert().getText(), is("指定の文書属性を設定します。"));
+		assertThat(driver.switchTo().alert().getText(), is("XXX"));//处理弹出框，此行可去
 		driver.switchTo().alert().accept();
 
 		// Document name
@@ -234,14 +224,14 @@ public class MainTestChrome {
 		driver.findElement(By.id("btnChgGrp7")).click();
 		vars.put("win4660", waitForWindow(2000));
 		driver.switchTo().window(vars.get("win4660").toString());
-		driver.findElement(By.linkText("NRIシステム管理者グループ(nri-admin)")).click();
+		driver.findElement(By.linkText("XXX")).click();//直接选择元素内容
 		driver.findElement(By.id("OkBtn")).click();
 		driver.switchTo().window(vars.get("win2420").toString());
 		driver.findElement(By.id("DrpLstRole7")).click();
 		driver.findElement(By.cssSelector("#DrpLstRole7 option[value='11']")).click();
 		vars.put("window_handles", driver.getWindowHandles());
 		driver.findElement(By.id("BtnModifyAcl")).click();
-		assertThat(driver.switchTo().alert().getText(), is("指定の文書アクセス権を設定します。"));
+		assertThat(driver.switchTo().alert().getText(), is("XXX"));
 		driver.switchTo().alert().accept();
 
 		// Document attributes
@@ -257,7 +247,7 @@ public class MainTestChrome {
 		driver.switchTo().window(vars.get("win4944").toString());
 		vars.put("window_handles", driver.getWindowHandles());
 		driver.findElement(By.id("BtnModify")).click();
-		assertThat(driver.switchTo().alert().getText(), is("指定の文書属性を設定します。"));
+		assertThat(driver.switchTo().alert().getText(), is("XXX"));
 		driver.switchTo().alert().accept();
 		driver.switchTo().window(vars.get("root").toString());
 
@@ -292,7 +282,7 @@ public class MainTestChrome {
 		driver.switchTo().frame(1);
 		driver.switchTo().frame(1);
 		driver.findElement(By.id("ImgBtnPkgRenDownload")).click();
-		assertThat(driver.switchTo().alert().getText(), is("対象となるファイルがありません。"));
+		assertThat(driver.switchTo().alert().getText(), is("XXX"));
 		driver.switchTo().alert().accept();
 		vars.put("window_handles", driver.getWindowHandles());
 		driver.findElement(By.id("BtnSelectDoc_Sansyo")).click();
@@ -312,8 +302,8 @@ public class MainTestChrome {
 		driver.findElement(By.id("BtnAddDoc")).click();
 		action.contextClick(driver.findElement(By.cssSelector("a > span"))).perform();
 		// Robot robot = new Robot();
-		// robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
-		// robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
+		// robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);//右击
+		// robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);//释放
 		driver.switchTo().window(vars.get("root").toString());
 		driver.switchTo().frame(1);
 		driver.switchTo().frame(1);
@@ -346,9 +336,9 @@ public class MainTestChrome {
 		vars.put("root", driver.getWindowHandle());
 		vars.put("window_handles", driver.getWindowHandles());
 		action.doubleClick(driver.findElement(By.cssSelector(".ItemValue:nth-child(2)"))).perform();
-		vars.put("グループ情報変更", waitForWindow(2000));
+		vars.put("网页名称，自拟", waitForWindow(2000));
 		vars.put("window_handles", driver.getWindowHandles());
-		driver.switchTo().window(vars.get("グループ情報変更").toString());
+		driver.switchTo().window(vars.get("XXX").toString());
 		driver.findElement(By.id("BtnGrpReg")).click();
 		driver.switchTo().alert().accept();
 		driver.switchTo().window(vars.get("root").toString());
@@ -396,7 +386,7 @@ public class MainTestChrome {
 		vars.put("ユーザー", waitForWindow(1000));
 		driver.switchTo().window(vars.get("ユーザー").toString());
 		driver.switchTo().frame(1);
-		driver.findElement(By.linkText("NRIシステム管理者グループ(nri-admin)")).click();
+		driver.findElement(By.linkText("XXX(nri-admin)")).click();
 		Thread.sleep(1000);
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(2);
@@ -456,7 +446,7 @@ public class MainTestChrome {
 		driver.switchTo().window(vars.get("win321").toString());
 		driver.switchTo().frame(1);
 		driver.findElement(By.id("DrpLstRegistFileType")).click();
-		driver.findElement(By.xpath("//option[. = 'カスタムテンプレート登録']")).click();
+		driver.findElement(By.xpath("//option[. = 'XXX']")).click();
 		vars.put("window_handles", driver.getWindowHandles());
 		Thread.sleep(2000);
 		driver.findElement(By.id("ImgBtnDocClsSelect")).sendKeys(Keys.ENTER);
@@ -473,7 +463,7 @@ public class MainTestChrome {
 		vars.put("window_handles", driver.getWindowHandles());
 		driver.findElement(By.id("BtnModify")).sendKeys(Keys.ENTER);
 		Thread.sleep(2000);
-		assertThat(driver.switchTo().alert().getText(), is("指定の文書属性を設定します。"));
+		assertThat(driver.switchTo().alert().getText(), is("XXX"));
 		driver.switchTo().alert().accept();
 		driver.switchTo().window(vars.get("win321").toString());
 		driver.switchTo().frame(1);
@@ -487,7 +477,7 @@ public class MainTestChrome {
 		driver.switchTo().frame(1);
 		driver.findElement(By.id("TxtDocName")).sendKeys("テストファイル");
 		driver.findElement(By.id("ImgBtnOK")).sendKeys(Keys.ENTER);
-		assertThat(driver.switchTo().alert().getText(), is("文書の登録を行います。よろしいですか？"));
+		assertThat(driver.switchTo().alert().getText(), is("XXX"));
 		driver.switchTo().alert().accept();
 	}
 
