@@ -102,11 +102,11 @@ public class AutoTest {
 			Method method = testClass.getMethod("doTest", WebDriver.class, Robot.class, String.class, String.class);
 			method.invoke(testObj, this.driver, this.robot, this.URL, this.browserType);
 		} catch (Exception e) {
-			System.err.println("ÀsŒ‹‰ÊF NG");
+			System.err.println("å®Ÿè¡Œçµæœï¼š NG");
 			throw e;
 		}
 
-		System.out.println("ÀsŒ‹‰ÊF OK");
+		System.out.println("å®Ÿè¡Œçµæœï¼š OK");
 	}
 
 	private String[] readParameters() {
@@ -144,18 +144,18 @@ public class AutoTest {
 
 	private void showParameterMsg() {
 
-		System.err.println("‰º‹L‚Ì‚æ‚¤‚Éˆø”‚ğ³‚µ‚­“ü—Í‚­‚¾‚³‚¢I");
-		System.err.println("ˆê”Ô–Úˆø”FŒ»VŠÂ‹«‹æ•ªiOLD:Œ»ŠÂ‹«ANEW:VŠÂ‹«)");
-		System.err.println("“ñ”Ô–Úˆø”Fƒuƒ‰ƒEƒU‹æ•ªiI:internet explorer 11AE:Microsoft EdgeAC:Google Chrome)");
-		System.err.println("O”Ô–Úˆø”FƒpƒbƒP[ƒWiƒVƒiƒŠƒIj–¼");
-		System.err.println("l”Ô–Úˆø”Fƒ\[ƒX–¼");
+		System.err.println("è¯·å¦‚ä¸‹æ­£ç¡®è¾“å…¥å‚æ•°ï¼");
+		System.err.println("ç¬¬ä¸€å‚æ•°ï¼šç¯å¢ƒåŒºåˆ†ï¼ˆOLDï¼šç°ç¯å¢ƒï¼ŒNEWï¼šæ–°ç¯å¢ƒ)");
+		System.err.println("ç¬¬äºŒå‚æ•°ï¼šæµè§ˆå™¨åŒºåˆ†ï¼ˆI:internet explorer 11ã€E:Microsoft Edgeã€C:Google Chrome)");
+		System.err.println("ç¬¬ä¸‰å‚æ•°ï¼šæ–¹æ¡ˆå");
+		System.err.println("ç¬¬å››å‚æ•°ï¼šæºåç§°");
 	}
 
 	private void readConfigFile() throws Exception {
 		this.configMap = new HashMap<String, String>();
 		File file = new File(this.configFilePath);
 		if (!file.exists()) {
-			throw new Exception("İ’èƒtƒ@ƒCƒ‹u" + this.configFilePath + "v‚ª‘¶İ‚µ‚Ü‚¹‚ñI");
+			throw new Exception("é…ç½®æ–‡ä»¶ã€Œ" + this.configFilePath + "ã€ä¸å­˜åœ¨ï¼");
 		}
 		
 		BufferedReader reader = null;
@@ -175,7 +175,7 @@ public class AutoTest {
 
 	private void endOperation() {
 
-		System.out.println("ÀsŠ®—¹‚µ‚Ü‚µ‚½Aƒuƒ‰ƒEƒU‚ğ•Â‚¶‚é‚É‚ÍEnterƒL[‚ğ‰Ÿ‚µ‚Ä‚­‚¾‚³‚¢ . . .");
+		System.out.println("è¿è¡Œå®Œæˆï¼Œè¯·æŒ‰Enteré”®å…³é—­æµè§ˆå™¨.");
 
 		Console console = System.console();
 		if (console == null) {
