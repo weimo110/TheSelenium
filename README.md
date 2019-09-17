@@ -73,10 +73,17 @@ action.contextClick(driver.findElement(By.id("XXX"))).perform();
 action.doubleClick(driver.findElement(By.id("XXX"))).perform();
 
 //弹出框
-assertThat(driver.switchTo().alert().getText(), is("XXX。"));
+assertThat(driver.switchTo().alert().getText(), is("XXX"));
 driver.switchTo().alert().accept();
 
 //等待
 Thread.sleep(2000);
+//效率低，必须等待（单位毫秒）
+CommonUtil.waitForElement(driver, By.id("XXX"));
+//wait至找到相关元素，见CommonUtil
+
+//截图
+screen.getScreenshot(driver, "D:\\Image\\"+ browserType +"2_XXX.PNG", null);
+//见Screenshot，见AutoTest
 
 //xpath，cssSelector
