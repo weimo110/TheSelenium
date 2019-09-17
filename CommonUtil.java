@@ -17,12 +17,12 @@ public class CommonUtil {
 	
 	public static void waitForOperation() {
 
-		System.out.println("ˆê’â~A‘¼‚Ìˆ—‚ğ‘Ò‚¿‚Ü‚·Bi‘¼‚Ìˆ—‚ªŠ®—¹‚µ‚½Œã‚ÅAuˆ—Š®—¹v‚ğ“ü—Í‚­‚¾‚³‚¢B");
+		System.out.println("æš‚åœï¼Œç­‰å¾…å…¶ä»–å¤„ç†ã€‚ï¼ˆè¯·åœ¨å…¶ä»–å¤„ç†å®Œæˆåè¾“å…¥â€œå¤„ç†å®Œæˆâ€ã€‚ï¼‰");
 
 		Console console = System.console();
 		String result  = console.readLine();
-		while ("ˆ—Š®—¹".equals(result)) {
-			System.out.println("ˆê’â~’†...");
+		while ("å¤„ç†å®Œäº†".equals(result)) {
+			System.out.println("æš‚æ—¶ä¸­æ­¢...");
 			console = System.console();
 			result = console.readLine();
 		}
