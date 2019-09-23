@@ -49,7 +49,7 @@ driver.switchTo().window(vars.get("XXX").toString());
 Robot robot = new Robot();
 robot.keyPress(KeyEvent.VK_F11);
 robot.keyRelease(KeyEvent.VK_F11);
-mouseOver(X, X);//移动鼠标，定义见下
+mouseOver(X, X);//移动鼠标，定义见下。拖拽
 robot.mousePress(InputEvent.BUTTON1_MASK);//左键
 robot.mouseMove(X, X);
 robot.mouseMove(X, X);
