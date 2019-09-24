@@ -86,4 +86,13 @@ CommonUtil.waitForElement(driver, By.id("XXX"));
 screen.getScreenshot(driver, "D:\\Image\\"+ browserType +"2_XXX.PNG", null);
 //见Screenshot，见AutoTest
 
+//浏览器选择
+if ("C".equals(browserType)) {
+    mouseOver(880, 853);
+    } else if ("I".equals(browserType)) {
+        mouseOver(777, 763);
+    } else if ("E".equals(browserType)) {
+    mouseOver(777, 793);
+}
+
 //xpath，cssSelector
