@@ -96,3 +96,4 @@ if ("C".equals(browserType)) {
 }
 
 //xpath，cssSelector
+//version.dll 放谷歌根目錄下。，代碼在設置下 就可以沒有自動化錄製的提示了
