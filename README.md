@@ -95,5 +95,5 @@ if ("C".equals(browserType)) {
     mouseOver(777, 793);
 }
 
-//xpath，cssSelector
+//xpath，cssSelector，dir，queryselector
 https://www.cnblogs.com/captainmeng/p/7852044.html
