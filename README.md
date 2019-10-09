@@ -95,5 +95,16 @@ if ("C".equals(browserType)) {
     mouseOver(777, 793);
 }
 
+//关闭Chrome自动化测试提升
+        ChromeOptions options = new ChromeOptions();
+        Map<String, Object> prefs = new HashMap<String, Object>();
+        prefs.put("credentials_enable_service", false);
+        prefs.put("profile.password_manager_enabled", false);
+        prefs.put("profile.default_content_setting_values.notifications", 2);
+        options.setExperimentalOption("prefs", prefs);
+        options.setExperimentalOption("excludeSwitches",Arrays.asList("enable-automation"));
+        options.addArguments("--disable-infobars");
+        driver = new ChromeDriver(options);
+
 //xpath，cssSelector，dir，queryselector
 https://www.cnblogs.com/captainmeng/p/7852044.html
