@@ -1,4 +1,4 @@
-package com.gcsoft.autots.utils;
+package utils;
 
 import java.awt.AWTException;
 import java.awt.Rectangle;

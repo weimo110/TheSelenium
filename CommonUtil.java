@@ -1,4 +1,4 @@
-package com.gcsoft.autots.utils;
+﻿package utils;
 
 import java.io.Console;
 import java.util.Map;
@@ -19,12 +19,12 @@ public class CommonUtil {
 
     public static void waitForOperation() {
 
-        System.out.println("一時停止、他の処理を待ちます。（他の処理が完了した後で、「処理完了」を入力ください。");
+        System.out.println("暂停，等待其他处理。（请在其他处理完成后输入“处理完成”。");
 
         Console console = System.console();
         String result = console.readLine();
-        while ("処理完了".equals(result)) {
-            System.out.println("一時停止中...");
+        while ("处理完成".equals(result)) {
+            System.out.println("暂停");
             console = System.console();
             result = console.readLine();
         }
