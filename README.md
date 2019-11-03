@@ -146,5 +146,3 @@ options.setExperimentalOption("excludeSwitches",Arrays.asList("enable-automation
 options.addArguments("--disable-infobars");
 driver=newChromeDriver(options);
 ```
-
-
