@@ -52,9 +52,9 @@ public String waitForWindow(WebDriver driver, int timeout) {
 // .click();
 // .sendKeys(Keys.ENTER);
 driver.findElement(By.id("XXX"));
-driver.findElement(By.cssSelector(".XXX")).click();
+driver.findElement(By.cssSelector(".XXX"));
 driver.findElement(By.xpath("XXX']"))；
-driver.findElement(By.linkText("XXX ")).click();
+driver.findElement(By.linkText("XXX "));
 ```
 **下拉框**  
 ```
