@@ -1,6 +1,6 @@
-### ³õÊ¼ÅäÖÃ
-1. Driver·ÅÓÚPython°²×°Ä¿Â¼ÄÚ
-2. importÅäÖÃ
+### åˆå§‹é…ç½®
+1. Driveræ”¾äºPythonå®‰è£…ç›®å½•å†…
+2. importé…ç½®
 ```
 from selenium import webdriver
 from time import sleep
@@ -9,63 +9,66 @@ from selenium.webdriver.common.action_chains import ActionChains
 ```
 3. `driver = webdriver.Chrome()`
 
-**½øÈëÍøÒ³**  
+**è¿›å…¥ç½‘é¡µ**  
 ```
 driver.get("http://www.XXX.com")
 ```
-### µÈ´ıÔªËØ
-1.ÒşĞÔµÈ´ı£¨implicitly_wait()£©: Ëæ×Åajax¼¼ÊõµÄ¹ã·ºÓ¦ÓÃ£¬Ò³ÃæµÄÔªËØÍùÍù¶¼¿ÉÒÔÊ±¼ä¾Ö²¿¼ÓÔØ£¬Ò²¾ÍÊÇÔÚÕû¸öÒ³ÃæÃ»ÓĞ¼ÓÔØÍêµÄÊ±ºò£¬¿ÉÄÜÎÒÃÇĞèÒªµÄÔªËØÒÑ¾­¼ÓÔØÍê³ÉÁË¡£ÁíÍâËüÊÇÈ«¾ÖĞÔµÄ£¬ÔÚ¿ªÍ·ÉèÖÃ¹ıÖ®ºó£¬Õû¸öµÄ³ÌĞòÔËĞĞ¹ı³ÌÖĞ¶¼»áÓĞĞ§
+### ç­‰å¾…å…ƒç´ 
+1.éšæ€§ç­‰å¾…ï¼ˆimplicitly_wait()ï¼‰: éšç€ajaxæŠ€æœ¯çš„å¹¿æ³›åº”ç”¨ï¼Œé¡µé¢çš„å…ƒç´ å¾€å¾€éƒ½å¯ä»¥æ—¶é—´å±€éƒ¨åŠ è½½ï¼Œä¹Ÿå°±æ˜¯åœ¨æ•´ä¸ªé¡µé¢æ²¡æœ‰åŠ è½½å®Œçš„æ—¶å€™ï¼Œå¯èƒ½æˆ‘ä»¬éœ€è¦çš„å…ƒç´ å·²ç»åŠ è½½å®Œæˆäº†ã€‚å¦å¤–å®ƒæ˜¯å…¨å±€æ€§çš„ï¼Œåœ¨å¼€å¤´è®¾ç½®è¿‡ä¹‹åï¼Œæ•´ä¸ªçš„ç¨‹åºè¿è¡Œè¿‡ç¨‹ä¸­éƒ½ä¼šæœ‰æ•ˆ
 ```
 driver.implicitly_wait(20)
 ```
-2.ÏÔĞÔµÈ´ı
+2.æ˜¾æ€§ç­‰å¾…
 ```
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-¡¤¡¤¡¤
+Â·Â·Â·
 WebDriverWait(driver,20,0.5).until(EC.presence_of_element_located((By.LINK_TEXT, 'CSDN')))
 ```
-3.Ç¿ĞĞµÈ´ı£¨µ¥Î»Ãë£©
+3.å¼ºè¡Œç­‰å¾…ï¼ˆå•ä½ç§’ï¼‰
 `Thread.sleep(2000);`  
-### ÔªËØ¶¨Î»
-<table><thead><tr><th>·½·¨Method</th>
-	<th>ÃèÊöDescription</th>
-	<th>²ÎÊıArgument</th>
-	<th>Ê¾ÀıExample</th>
+### å…ƒç´ å®šä½
+<table><thead><tr><th>æ–¹æ³•Method</th>
+	<th>æè¿°Description</th>
+	<th>å‚æ•°Argument</th>
+	<th>ç¤ºä¾‹Example</th>
 </tr></thead><tbody><tr><td><code>id</code></td>
-	<td>¸Ã·½·¨Í¨¹ıIDµÄÊôĞÔÖµÈ¥¶¨Î»²éÕÒµ¥¸öÔªËØ</td>
-	<td>id: ĞèÒª±»²éÕÒµÄÔªËØµÄID</td>
+	<td>è¯¥æ–¹æ³•é€šè¿‡IDçš„å±æ€§å€¼å»å®šä½æŸ¥æ‰¾å•ä¸ªå…ƒç´ </td>
+	<td>id: éœ€è¦è¢«æŸ¥æ‰¾çš„å…ƒç´ çš„ID</td>
 	<td><code>find_element_by_id('search')</code></td>
 </tr><tr><td><code>name</code></td>
-	<td>¸Ã·½·¨Í¨¹ınameµÄÊôĞÔÖµÈ¥¶¨Î»²éÕÒµ¥¸öÔªËØ</td>
-	<td>name: ĞèÒª±»²éÕÒµÄÔªËØµÄÃû³Æ</td>
+	<td>è¯¥æ–¹æ³•é€šè¿‡nameçš„å±æ€§å€¼å»å®šä½æŸ¥æ‰¾å•ä¸ªå…ƒç´ </td>
+	<td>name: éœ€è¦è¢«æŸ¥æ‰¾çš„å…ƒç´ çš„åç§°</td>
 	<td><code>find_element_by_name('q')</code></td>
 </tr><tr><td><code>class name</code></td>
-	<td>¸Ã·½·¨Í¨¹ıclassµÄÃû³ÆÖµÈ¥¶¨Î»²éÕÒµ¥¸öÔªËØ</td>
-	<td>class_name: ĞèÒª±»²éÕÒµÄÔªËØµÄÀàÃû</td>
+	<td>è¯¥æ–¹æ³•é€šè¿‡classçš„åç§°å€¼å»å®šä½æŸ¥æ‰¾å•ä¸ªå…ƒç´ </td>
+	<td>class_name: éœ€è¦è¢«æŸ¥æ‰¾çš„å…ƒç´ çš„ç±»å</td>
 	<td><code>find_element_by_class_name('input-text')</code></td>
 </tr><tr><td><code>tag_name</code></td>
-	<td>¸Ã·½·¨Í¨¹ıtagµÄÃû³ÆÖµÈ¥¶¨Î»²éÕÒµ¥¸öÔªËØ</td>
-	<td>tag: ĞèÒª±»²éÕÒµÄÔªËØµÄ±êÇ©Ãû³Æ</td>
+	<td>è¯¥æ–¹æ³•é€šè¿‡tagçš„åç§°å€¼å»å®šä½æŸ¥æ‰¾å•ä¸ªå…ƒç´ </td>
+	<td>tag: éœ€è¦è¢«æŸ¥æ‰¾çš„å…ƒç´ çš„æ ‡ç­¾åç§°</td>
 	<td><code>find_element_by_tag_name('input')</code></td>
 </tr><tr><td><code>link_text</code></td>
-	<td>¸Ã·½·¨Í¨¹ıÁ´½ÓÎÄ×ÖÈ¥¶¨Î»²éÕÒµ¥¸öÔªËØ</td>
-	<td>link_text: ĞèÒª±»²éÕÒµÄÔªËØµÄÁ´½ÓÎÄ×Ö</td>
+	<td>è¯¥æ–¹æ³•é€šè¿‡é“¾æ¥æ–‡å­—å»å®šä½æŸ¥æ‰¾å•ä¸ªå…ƒç´ </td>
+	<td>link_text: éœ€è¦è¢«æŸ¥æ‰¾çš„å…ƒç´ çš„é“¾æ¥æ–‡å­—</td>
 	<td><code>find_element_by_link_text('Log In')</code></td>
 </tr><tr><td><code>partial_link_text</code></td>
-	<td>¸Ã·½·¨Í¨¹ı²¿·ÖÁ´½ÓÎÄ×ÖÈ¥¶¨Î»²éÕÒµ¥¸öÔªËØ</td>
-	<td>link_text: ĞèÒª±»²éÕÒµÄÔªËØµÄ²¿·ÖÁ´½ÓÎÄ×Ö</td>
+	<td>è¯¥æ–¹æ³•é€šè¿‡éƒ¨åˆ†é“¾æ¥æ–‡å­—å»å®šä½æŸ¥æ‰¾å•ä¸ªå…ƒç´ </td>
+	<td>link_text: éœ€è¦è¢«æŸ¥æ‰¾çš„å…ƒç´ çš„éƒ¨åˆ†é“¾æ¥æ–‡å­—</td>
 	<td><code>find_element_by_partial_link_text('Long')</code></td>
 </tr><tr><td><code>xpath</code></td>
-	<td>¸Ã·½·¨Í¨¹ıXPathµÄÖµÈ¥¶¨Î»²éÕÒµ¥¸öÔªËØ</td>
-	<td>xpath: ĞèÒª±»²éÕÒµÄÔªËØµÄxpath</td>
+	<td>è¯¥æ–¹æ³•é€šè¿‡XPathçš„å€¼å»å®šä½æŸ¥æ‰¾å•ä¸ªå…ƒç´ </td>
+	<td>xpath: éœ€è¦è¢«æŸ¥æ‰¾çš„å…ƒç´ çš„xpath</td>
 	<td><code>find_element_by_xpath('//*[@id="xx"]/a')</code></td>
 </tr><tr><td><code>css_selector</code></td>
-	<td>¸Ã·½·¨Í¨¹ıCSSÑ¡ÔñÆ÷È¥¶¨Î»²éÕÒµ¥¸öÔªËØ</td>
-	<td>css_selector: ĞèÒª±»²éÕÒµÄÔªËØµÄID</td>
+	<td>è¯¥æ–¹æ³•é€šè¿‡CSSé€‰æ‹©å™¨å»å®šä½æŸ¥æ‰¾å•ä¸ªå…ƒç´ </td>
+	<td>css_selector: éœ€è¦è¢«æŸ¥æ‰¾çš„å…ƒç´ çš„ID</td>
 	<td><code>find_element_by_css_selector('#search')</code></td>
-</tr></tbody></table>
+</tr></tbody>
+</table>
+
+
 ```
 # .click()
 # .clear()
@@ -73,18 +76,18 @@ WebDriverWait(driver,20,0.5).until(EC.presence_of_element_located((By.LINK_TEXT,
 # .send_keys(u"XXX")
 # .send_keys(Keys.CONTROL, 'a')
 ```
-**ÏÂÀ­¿ò**  
+**ä¸‹æ‹‰æ¡†**  
 ```
-driver.find_element_by_xpath("//option[.='ÄÚÈİ']").click()
+driver.find_element_by_xpath("//option[.='å†…å®¹']").click()
 ```
-**Ò³ÃæÄÚ²¿frameÖØÖÃ¼°½øÈë**
+**é¡µé¢å†…éƒ¨frameé‡ç½®åŠè¿›å…¥**
 ```
 element_frame = driver.find_element_by_css_selector('#iframe-1')
 driver.switch_to.frame(element_frame)
-¡­¡­
+â€¦â€¦
 driver.switch_to.default_content()
 ```
-**Êı×éÑ¡Ôñ²Ù×÷**
+**æ•°ç»„é€‰æ‹©æ“ä½œ**
 ```
 grou = driver.find_elements_by_class_name("mnav")
 len(grou)
@@ -93,135 +96,133 @@ driver.find_elements_by_class_name("mnav")[0].click()
 **xpath**  
 ![](images/xPath.png)  
 **cssSelector** 
-1. µã»÷Ò»¸ö <a id="customer_chosen">
-2. ×Ô¶¯²úÉúÁËÒ»¸ö &lt;ul id="customer_list">
-3. µã»÷&lt;ul>µÄµÚÎå¸ö&lt;li>
+1. ç‚¹å‡»ä¸€ä¸ª &lt;a id="customer_chosen">
+2. è‡ªåŠ¨äº§ç”Ÿäº†ä¸€ä¸ª &lt;ul id="customer_list">
+3. ç‚¹å‡»&lt;ul>çš„ç¬¬äº”ä¸ª&lt;li>
 ```
 driver.find_element_by_css_selector('#customer_chosen').click()
 driver.find_element_by_css_selector('#customer_list > li:nth-child(5)')
 ```
 ![](images/css_selector.png)
-### ´°¿Ú²Ù×÷    
-**´óĞ¡Éè¶¨** 
+### çª—å£æ“ä½œ    
+**å¤§å°è®¾å®š** 
 ```
 driver.set_window_size(800, 400)
 driver.maximize_window()
 ```
-**Ç°½øºóÍË**
+**å‰è¿›åé€€**
 ```
 driver.back()
 driver.forward()
 ```
 
-**µ¯³öÒ³Ãæ²¶»ñ**
+**å¼¹å‡ºé¡µé¢æ•è·**
 ```
 ```
-**µ¯³ö¿ò**
+**å¼¹å‡ºæ¡†**
 ```
 alert = driver.switch_to.alert
 alert.accept()
 alert.dismiss() 
 ```
-### Êó±ê¼üÅÌ²Ù×÷
+### é¼ æ ‡é”®ç›˜æ“ä½œ
 ```
-context_click() # ÓÒ»÷
-double_click() # Ë«»÷
-drag_and_drop() # ÍÏ×§
-move_to_element() # Êó±êÍ£ÔÚÒ»¸öÔªËØÉÏ
-click_and_hold() # °´ÏÂÊó±ê×ó¼üÔÚÒ»¸öÔªËØÉÏ
+context_click() # å³å‡»
+double_click() # åŒå‡»
+drag_and_drop() # æ‹–æ‹½
+move_to_element() # é¼ æ ‡åœåœ¨ä¸€ä¸ªå…ƒç´ ä¸Š
+click_and_hold() # æŒ‰ä¸‹é¼ æ ‡å·¦é”®åœ¨ä¸€ä¸ªå…ƒç´ ä¸Š
 ```
-**Robot²Ù×÷** ×¼È·Ä£ÄâÊó±ê¼üÅÌ²Ù×÷
+**Robotæ“ä½œ** å‡†ç¡®æ¨¡æ‹Ÿé¼ æ ‡é”®ç›˜æ“ä½œ
 ```
 
 ```
-**Actionµã»÷£º** Ä£ÄâÊó±ê£¬IE²»Ö§³Ö
+**Actionç‚¹å‡»ï¼š** æ¨¡æ‹Ÿé¼ æ ‡ï¼ŒIEä¸æ”¯æŒ
 ```
-# ·½·¨Ä£ÄâÊó±êÓÒ¼ü
+# æ–¹æ³•æ¨¡æ‹Ÿé¼ æ ‡å³é”®
 from selenium.webdriver.common.action_chains import ActionChains
-# ¶¨Î»µ½ÒªÓÒ»÷µÄÔªËØ
+# å®šä½åˆ°è¦å³å‡»çš„å…ƒç´ 
 right =driver.find_element_by_xpath("xx")
-# ¶Ô¶¨Î»µ½µÄÔªËØÖ´ĞĞÊó±êÓÒ¼ü²Ù×÷
+# å¯¹å®šä½åˆ°çš„å…ƒç´ æ‰§è¡Œé¼ æ ‡å³é”®æ“ä½œ
 ActionChains(driver).context_click(right).perform()
-# ¶¨Î»µ½ÒªË«»÷µÄÔªËØ
+# å®šä½åˆ°è¦åŒå‡»çš„å…ƒç´ 
 double = driver.find_element_by_xpath("xxx")
-# ¶Ô¶¨Î»µ½µÄÔªËØÖ´ĞĞÊó±êË«»÷²Ù×÷
+# å¯¹å®šä½åˆ°çš„å…ƒç´ æ‰§è¡Œé¼ æ ‡åŒå‡»æ“ä½œ
 ActionChains(driver).double_click(double).perform()
 ```
-**¼üÅÌÊÂ¼ş**
-        <table><thead><tr><th>´úÂë</th>
-			<th>ÃèÊö</th>
+**é”®ç›˜äº‹ä»¶**
+        <table><thead><tr><th>ä»£ç </th>
+			<th>æè¿°</th>
 		</tr></thead><tbody><tr><td><code>send_keys(Keys.BACKSPACE)</code></td>
-			<td>É¾³ı¼ü(BackSpace)</td>
+			<td>åˆ é™¤é”®(BackSpace)</td>
 		</tr><tr><td><code>send_keys(Keys.SPACE)</code></td>
-			<td>¿Õ¸ñ¼ü(Space)</td>
+			<td>ç©ºæ ¼é”®(Space)</td>
 		</tr><tr><td><code>send_keys(Keys.TAB)</code></td>
-			<td>ÖÆ±í¼ü(Tab)</td>
+			<td>åˆ¶è¡¨é”®(Tab)</td>
 		</tr><tr><td><code>send_keys(Keys.ESCAPE)</code></td>
-			<td>»ØÍË¼ü(Esc)</td>
+			<td>å›é€€é”®(Esc)</td>
 		</tr><tr><td><code>send_keys(Keys.ENTER)</code></td>
-			<td>»Ø³µ¼ü(Enter)</td>
+			<td>å›è½¦é”®(Enter)</td>
 		</tr><tr><td><code>send_keys(Keys.CONTROL,'a')</code></td>
-			<td>È«Ñ¡£¨Ctrl+A£©</td>
+			<td>å…¨é€‰ï¼ˆCtrl+Aï¼‰</td>
 		</tr><tr><td><code>send_keys(Keys.CONTROL,'c')</code></td>
-			<td>¸´ÖÆ£¨Ctrl+C£©</td>
+			<td>å¤åˆ¶ï¼ˆCtrl+Cï¼‰</td>
 		</tr></tbody></table>
-```
-```
-### ÆäËû
-**¹Ø±ÕChrome×Ô¶¯»¯²âÊÔÌáÊ¾**
+### å…¶ä»–
+**å…³é—­Chromeè‡ªåŠ¨åŒ–æµ‹è¯•æç¤º**
 ```
 options.add_experimental_option('prefs', prefs)
 options.add_argument("disable-infobars")
 ```
-**½ØÍ¼²Ù×÷**
+**æˆªå›¾æ“ä½œ**
 ```
 save_screenshot(file)
 ```
-**expected_conditionsÄ£¿é**
+**expected_conditionsæ¨¡å—**
 ```
 selenium.webdriver.support.expected_conditions
 ```
-1. ÑéÖ¤title: ÊÇ·ñµÈÓÚ»ò°üº¬ÓÚdriver.title 
+1. éªŒè¯title: æ˜¯å¦ç­‰äºæˆ–åŒ…å«äºdriver.title 
 ```
 title_is  
 title_contains  
 ```
-2. ÑéÖ¤ÔªËØÊÇ·ñ³öÏÖ: ´«ÈëµÄ²ÎÊı¶¼ÊÇÔª×éÀàĞÍµÄlocator
+2. éªŒè¯å…ƒç´ æ˜¯å¦å‡ºç°: ä¼ å…¥çš„å‚æ•°éƒ½æ˜¯å…ƒç»„ç±»å‹çš„locator
 ```
 presence_of_element_located  
 presence_of_all_elements_located  
 ```
-3. ÑéÖ¤ÔªËØÊÇ·ñ¿É¼û
+3. éªŒè¯å…ƒç´ æ˜¯å¦å¯è§
 ```
-visibility_of_element_located  # ´«ÈëÔª×éÀàĞÍµÄlocator
-invisibility_of_element_located  # ´«ÈëÔª×éÀàĞÍµÄlocator
-visibility_of  # ´«ÈëWebElement
+visibility_of_element_located  # ä¼ å…¥å…ƒç»„ç±»å‹çš„locator
+invisibility_of_element_located  # ä¼ å…¥å…ƒç»„ç±»å‹çš„locator
+visibility_of  # ä¼ å…¥WebElement
 ```
-4. Ä³¶ÎÎÄ±¾ÊÇ·ñ³öÏÖÔÚÄ³ÔªËØ
+4. æŸæ®µæ–‡æœ¬æ˜¯å¦å‡ºç°åœ¨æŸå…ƒç´ 
 ```
 text_to_be_present_in_element  
 text_to_be_present_in_element_value
 ```
-5. ÅĞ¶ÏframeÊÇ·ñ¿ÉÇĞÈë
+5. åˆ¤æ–­frameæ˜¯å¦å¯åˆ‡å…¥
 ```
 frame_to_be_available_and_switch_to_it 
 ```
-6. ÅĞ¶ÏÊÇ·ñÓĞalert³öÏÖ
+6. åˆ¤æ–­æ˜¯å¦æœ‰alertå‡ºç°
 ```
 alert_is_present 
 ```
-7. ÅĞ¶ÏÔªËØÊÇ·ñ¿Éµã»÷
+7. åˆ¤æ–­å…ƒç´ æ˜¯å¦å¯ç‚¹å‡»
 ```
-element_to_be_clickable  # ´«ÈëÔª×éÀàĞÍµÄlocator
+element_to_be_clickable  # ä¼ å…¥å…ƒç»„ç±»å‹çš„locator
 ```
-8. ÅĞ¶ÏÔªËØÊÇ·ñ±»Ñ¡ÖĞ
+8. åˆ¤æ–­å…ƒç´ æ˜¯å¦è¢«é€‰ä¸­
 ```
-element_to_be_selected  # ´«ÈëWebElement¶ÔÏó
-element_located_to_be_selected  # locatorÔª×é
-element_selection_state_to_be  # ´«ÈëWebElement¶ÔÏóÒÔ¼°×´Ì¬(·µ»Øboolean)
-element_located_selection_state_to_be  # ´«ÈëlocatorÒÔ¼°×´Ì¬(·µ»Øboolean)
+element_to_be_selected  # ä¼ å…¥WebElementå¯¹è±¡
+element_located_to_be_selected  # locatorå…ƒç»„
+element_selection_state_to_be  # ä¼ å…¥WebElementå¯¹è±¡ä»¥åŠçŠ¶æ€(è¿”å›boolean)
+element_located_selection_state_to_be  # ä¼ å…¥locatorä»¥åŠçŠ¶æ€(è¿”å›boolean)
 ```
-9. ÅĞ¶ÏÒ»¸öÔªËØÊÇ·ñÈÔÔÚDOMÖĞ: ´«ÈëWebElement¶ÔÏó£¬¿ÉÒÔÅĞ¶ÏÒ³ÃæÊÇ·ñË¢ĞÂÁË
+9. åˆ¤æ–­ä¸€ä¸ªå…ƒç´ æ˜¯å¦ä»åœ¨DOMä¸­: ä¼ å…¥WebElementå¯¹è±¡ï¼Œå¯ä»¥åˆ¤æ–­é¡µé¢æ˜¯å¦åˆ·æ–°äº†
 ```
 staleness_of 
 ```
