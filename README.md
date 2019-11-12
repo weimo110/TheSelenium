@@ -5,6 +5,4 @@
 Selenium WebDriver API 官方参考：[http://seleniumhq.github.io/selenium/docs/api/py/](http://seleniumhq.github.io/selenium/docs/api/py/)
   
 具体API文档地址:[https://seleniumhq.github.io/selenium/docs/api/py/api.html](https://seleniumhq.github.io/selenium/docs/api/py/api.html)  
-### unittest
-- [总结](https://github.com/weimo110/TheSelenium/blob/master/unittest.md)
-- 框架实现，生成测试报告
+### [unittest](https://github.com/weimo110/TheSelenium/blob/master/unittest.md)
